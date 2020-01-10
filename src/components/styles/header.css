@@ -1,0 +1,143 @@
+.Header__back {
+    background-image:
+        linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.5)
+        ),
+        url('../../images/new_york_header.png');
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+  }
+
+.Header__subtitle {
+    font-size: 1em;
+    color: white;
+    opacity: 0.8;
+    font-weight: 200;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+.Header__title {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+
+.Header__options {
+    font-size: 0.8em;
+    color: white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 0.8rem;
+  }
+
+
+  /*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1200px) {
+    .Header__title {
+        font-size: 5em;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    .Header__options {
+        font-size: 0.8em;
+        color: white;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0 1.3rem;
+      }
+    
+}
+
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Header__title {
+        font-size: 5em;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    .Header__options {
+        font-size: 0.8em;
+        color: white;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0 1.3rem;
+      }
+    
+}
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .Header__title {
+        font-size: 5em;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    .Header__options {
+        font-size: 0.8em;
+        color: white;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0 1.3rem;
+      }
+    
+}
+
+
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    .Header__title {
+        font-size: 4em;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    .Header__options {
+        font-size: 0.8em;
+        color: white;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0 1.3rem;
+      }
+    
+}
+
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media screen and (max-width: 575px) {
+    
+}
