@@ -5,8 +5,8 @@
         rgba(0, 0, 0, 0.5)
         ),
         url('../../images/new_york_header.png');
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
+    background-repeat: repeat;
+    padding-bottom: 4rem;
   }
 
 .Header__subtitle {
@@ -21,6 +21,7 @@
 
 .Header__title {
     font-size: 3em;
+    font-weight: normal;
     color: white;
     text-align: center;
     text-transform: capitalize;
@@ -36,13 +37,27 @@
   }
 
 
+.Header__search {
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#searchButton{
+   background-color: rgb(232,0,16);
+   border:none;
+   color: rgb(255,255,255);
+   padding: 1em;
+}
   /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1200px) {
     .Header__title {
-        font-size: 5em;
+        font-size: 4em;
+        font-weight: normal;
         color: white;
         text-align: center;
         text-transform: capitalize;
@@ -67,6 +82,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
     .Header__title {
         font-size: 5em;
+        font-weight: normal;
         color: white;
         text-align: center;
         text-transform: capitalize;
@@ -91,6 +107,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .Header__title {
         font-size: 5em;
+        font-weight: normal;
         color: white;
         text-align: center;
         text-transform: capitalize;
@@ -116,6 +133,7 @@
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .Header__title {
         font-size: 4em;
+        font-weight: normal;
         color: white;
         text-align: center;
         text-transform: capitalize;
