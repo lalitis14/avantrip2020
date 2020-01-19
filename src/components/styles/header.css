@@ -36,8 +36,10 @@
     padding: 0 0.8rem;
   }
 
-
 .Header__search {
+    position: flex;
+    flex-direction: column;
+    align-items: stretch;
     border-radius: 5px;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
@@ -49,25 +51,31 @@
   color: rgb(136,140,145);
   font-size: 0.7em;
   position: absolute;
-  top: 12px;
   z-index: 10;
 }
 
 .floating-label-origin {
-  left: 15px;
+  left: 20px;
+  top: 10px;
 }
 
 .floating-label-destination {
-  left: 200px;
+  left: 20px;
+  top: 80px;
 }
 
 .floating-label-dates {
-  left: 390px;
+  left: 20px;
+  top: 150px;
 }
 
 .floating-label-passengers {
-  left: 710px;
+  left: 20px;
+  top: 220px;
 }
+
+
+
 
 #searchButton{
    background-color: rgb(232,0,16);
@@ -75,12 +83,20 @@
    color: rgb(255,255,255);
    padding: 1em;
 }
+
+
   /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1200px) {
-    .Header__title {
+  .Header__search {
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+   .Header__title {
         font-size: 4em;
         font-weight: normal;
         color: white;
@@ -96,7 +112,35 @@
         text-transform: uppercase;
         padding: 0 1.3rem;
       }
+
+    .placeholder{
+      top: 12px;
+    }
+
+    .floating-label-origin {
+      left: 15px;
+    }
     
+    .floating-label-destination {
+      left: 200px;
+    }
+    
+    .floating-label-dates {
+      left: 390px;
+    }
+    
+    .floating-label-passengers {
+      left: 725px;
+    }
+
+    #datepicker{
+      flex-grow: 1.5;
+      }
+      
+    #passengers{
+      flex-grow: 1.5;
+    }
+
 }
 
 
@@ -105,6 +149,13 @@
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 992px) and (max-width: 1199px) {
+ 
+     .Header__search {
+      justify-content: center;
+      align-items: stretch;
+      flex-direction: row;
+    }  
+
     .Header__title {
         font-size: 5em;
         font-weight: normal;
@@ -121,6 +172,35 @@
         text-transform: uppercase;
         padding: 0 1.3rem;
       }
+
+      .floating-label-origin {
+        left: 15px;
+      }
+      
+      .floating-label-destination {
+        left: 200px;
+      }
+      
+      .floating-label-dates {
+        left: 390px;
+      }
+  
+      .floating-label-passengers {
+        left: 635px;
+      }
+
+      .placeholder{
+        top: 12px;
+      }
+  
+
+      #datepicker{
+        flex-grow: 1.5;
+        }
+        
+      #passengers{
+        flex-grow: 1.5;
+        }
     
 }
 
@@ -130,6 +210,7 @@
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 991px) {
+
     .Header__title {
         font-size: 5em;
         font-weight: normal;
@@ -146,6 +227,14 @@
         text-transform: uppercase;
         padding: 0 1.3rem;
       }
+
+      #datepicker{
+        flex-grow: 1.5;
+        }
+        
+      #passengers{
+        flex-grow: 1.5;
+        }
     
 }
 

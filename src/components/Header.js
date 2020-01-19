@@ -6,12 +6,10 @@ import Destination from '../components/Destination';
 import Passengers from '../components/Passengers';
 import { FaSearch } from 'react-icons/fa';
 
-
-
 class Header extends React.Component {
     render(){
     return(
-      <header className="Header__back">
+      <div className="Header__back">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-12">
@@ -27,24 +25,22 @@ class Header extends React.Component {
                 </div>
             </div>
             <div className="container">
-                <div className="Header__search row">
-                    <div className="input-group mb-3">
-                        <Origin />
+                <div className="Header__search input-group">
+                        <div id="origin"><Origin /></div>
                         <span className="placeholder floating-label-origin">origen</span>
-                        <Destination/>
+                        <div id="destination"><Destination/></div>
                         <span className="placeholder floating-label-destination">destino</span>
-                        <DatePicker/>
+                        <div id="datepicker"><DatePicker/></div>
                         <span className="placeholder floating-label-dates">fechas</span>
-                        <Passengers />
+                        <div id="passengers"><Passengers /></div>
                         <span className="placeholder floating-label-passengers">pasajeros y clase</span>
                         <div className="input-group-append">
-                                <span className="input-group-text" id="searchButton"><FaSearch /></span>
+                            <span className="input-group-text" id="searchButton"><FaSearch /></span>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
-      </header>
+      </div>
     )
   }
 }
