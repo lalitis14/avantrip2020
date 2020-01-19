@@ -14,6 +14,8 @@ class DatePicker extends React.Component {
     return(
         <div className="form-control" aria-label="dates" id="dateRange">
             <DateRangePicker
+                className={'datePicker__input'}	
+                // format={'EEE-dd-MMM'}
                 calendarIcon={null}
                 clearIcon={null}
                 required={true}

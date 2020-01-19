@@ -42,7 +42,6 @@ class Result extends React.Component {
 
     render(){
     return(
-      <body id="Result__body">
         <div id="Result__chart">
           <Bar
             data={this.state.chartData}
@@ -82,7 +81,6 @@ class Result extends React.Component {
             height={this.state.chartData.height}
           />
         </div>
-      </body>
     )
   }
 }

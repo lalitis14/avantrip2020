@@ -3,10 +3,9 @@ import Autosuggest from 'react-autosuggest';
 
 const theme = {
   input:{
-    height: 50,
-  },
-  inputFocused: {
-    outline: 'none'
+    height: 70,
+    paddingLeft:10,
+    paddingTop:15
   },
   inputOpen: {
     borderBottomLeftRadius: 0,
@@ -18,7 +17,7 @@ const theme = {
   suggestionsContainerOpen: {
     display: 'block',
     position: 'absolute',
-    top: 50,
+    top: 70,
     border: '1px solid #aaa',
     backgroundColor: '#fff',
     fontSize: 16,
@@ -173,7 +172,6 @@ class Destination extends React.Component {
         const { value, suggestions } = this.state;
 
         const inputProps = {
-            placeholder: 'Destino',
             value,
             onChange: this.onChange,
             id: 'destination'

@@ -28,13 +28,16 @@ class Header extends React.Component {
             </div>
             <div className="container">
                 <div className="Header__search row">
-                    <div class="input-group mb-3">
+                    <div className="input-group mb-3">
                         <Origin />
+                        <span className="placeholder floating-label-origin">origen</span>
                         <Destination/>
+                        <span className="placeholder floating-label-destination">destino</span>
                         <DatePicker/>
-                        <input type="text" className="form-control" aria-label="passengersNbr"></input>
-                        {/* <Passengers/> */}
-                        <div class="input-group-append">
+                        <span className="placeholder floating-label-dates">fechas</span>
+                        <Passengers />
+                        <span className="placeholder floating-label-passengers">pasajeros y clase</span>
+                        <div className="input-group-append">
                                 <span className="input-group-text" id="searchButton"><FaSearch /></span>
                         </div>
                     </div>

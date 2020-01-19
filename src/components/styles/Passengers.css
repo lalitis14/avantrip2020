@@ -1,0 +1,89 @@
+.Passengers__Modal{
+    background-color:rgb(255,255,255);
+    width: 90%;
+    position: absolute;
+    top: 40%;    
+    left: 5%;
+    padding: 50px;
+}
+
+
+.Modal__title{
+    font-size: 16px;
+}
+
+.Class__option:hover {
+    font-weight: bold;
+}
+
+.icons{
+    font-size: 12px;
+}
+
+#passengersInput{
+    height: 70px;
+    
+}
+
+#selectInput{
+    border: none;
+    position: relative;
+    top:20px;
+    color: rgb(0,0,0);
+}
+
+  /*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1200px) {
+    .Passengers__Modal{
+        width: 50%;
+        left: 45%;
+    }
+}
+
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Passengers__Modal{
+        width: 60%;
+        left: 30%;
+    }
+}
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .Passengers__Modal{
+        width: 80%;
+        left:10%;
+    }
+}
+
+
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    
+}
+
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media screen and (max-width: 575px) {
+    
+}
+

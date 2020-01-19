@@ -1,6 +1,16 @@
+.react-daterange-picker__range-divider{
+    position: absolute;
+    left: 85px;
+    top: 12px;
+}
+
+.react-daterange-picker__wrapper {
+    border: none;
+}
+
 #dateRange {
-height: 50px;
-display:flex;
-vertical-align: middle;
-justify-content: center;
+    height: 70px;
+    display:flex;
+    vertical-align: middle;
+    padding-top: 15px;
 }
