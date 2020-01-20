@@ -55,7 +55,7 @@ class Passengers extends React.Component {
                 <div className="row py-2">
                     <h5 className="Modal__title col-12 col-md-6">Pasajeros</h5>
                     <span className="col-1 offset-md-1 text-right icons"><FaMinus /></span>
-                    <p class="col-2 text-center">2</p>
+                    <p className="col-2 text-center">2</p>
                     <span className="col-1 text-left icons"><FaPlus /></span>
                 </div>
             </ReactModal>

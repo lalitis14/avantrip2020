@@ -5,6 +5,7 @@ import Origin from '../components/Origin';
 import Destination from '../components/Destination';
 import Passengers from '../components/Passengers';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     render(){
@@ -19,9 +20,21 @@ class Header extends React.Component {
                     <h1 className="Header__title">nueva york</h1>    
                 </div>
                 <div className="col-12 text-center">
-                    <span className="Header__options">ida y vuelta</span>
-                    <span className="Header__options">solo ida</span>
-                    <span className="Header__options">multidestino</span>
+                    <span className="Header__options">
+                        <Link to="/" className="text-white">
+                        ida y vuelta
+                        </Link>
+                    </span>
+                    <span className="Header__options">
+                        <Link to="/" className="text-white">
+                        solo ida
+                        </Link>
+                    </span>
+                    <span className="Header__options">
+                        <Link to="/" className="text-white">
+                        multidestino
+                        </Link>
+                    </span>
                 </div>
             </div>
             <div className="container">
@@ -35,9 +48,13 @@ class Header extends React.Component {
                         <div id="passengers"><Passengers /></div>
                         <span className="placeholder floating-label-passengers">pasajeros y clase</span>
                         <div className="input-group-append">
-                            <span className="input-group-text" id="searchButton"><FaSearch /></span>
+                            <Link to="SearchResult"className="input-group-text" id="searchButton">
+                                    <FaSearch className="text-white"/>
+                            </Link>
                         </div>
-                            <span id="searchButtonXL">BUSCAR VUELOS</span>
+                            <Link to="SearchResult"  id="searchButtonXL">
+                                    BUSCAR VUELOS
+                            </Link>
                 </div>
             </div>
         </div>

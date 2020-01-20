@@ -1,16 +1,20 @@
 import React from 'react';
-import Header from '../components/Header';
-import Result from '../components/Result';
+import HeaderIV from './idayvuelta.js';
+import HeaderAndResultIV from './SearchResult.js';
 import './TripSearch.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 
 class Search extends React.Component {
     render() {
       return(
-        <div className="TripSearch__body">
-          <Header />
-          <Result />
-        </div>
-      );
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={HeaderIV} />
+            <Route exact path="/SearchResult" component={HeaderAndResultIV} />
+          </Switch>
+      </BrowserRouter>
+        );
     }
   }
   

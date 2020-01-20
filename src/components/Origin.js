@@ -136,7 +136,7 @@ const getSuggestions = value => {
   const getSuggestionValue = suggestion => suggestion.name;
   
   const renderSuggestion = suggestion => (
-    <div class="renderSuggestion">
+    <div className="renderSuggestion">
       {suggestion.name}
     </div>
   );
