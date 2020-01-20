@@ -1,6 +1,136 @@
+.Result__chart__header__month{
+    font-size: 0.75em;    
+    text-align: center;
+    color: rgb(97, 97, 97);
+}
+
+.Result__chart__header__price{
+    font-size: 0.7em;
+    color: rgb(182, 182, 182);
+}
+
+
+#Result {
+    position:relative;
+}
+
 #Result__chart {
     background-color: rgb(255,255,255);
     width: 80%;
+    height: 30vh;
     margin: 30px auto;
     box-shadow: 3px 4px 4px 0px rgba(76,76,76,0.5);
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
+
+#Result__chart__header{
+    border-bottom: 1px solid rgb(230, 230, 230);
+    width: 80%;
+    display:flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    height: 5vh;
+}
+
+#active__month{
+    color: rgb(7,155,217);
+    
+}
+
+#active__price{
+    color: rgb(7,155,217);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(10, 176, 247);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Result__chart__footer{
+    font-size: 0.6em;
+    color: rgb(141, 141, 141);
+    position: absolute;
+    bottom:0;
+    left:11%;
+    width:75%
+}
+
+    /*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1200px) {
+    .Result__chart__header__price{
+        font-size: 0.8em;
+    }
+ 
+    #Result__chart {
+        height: 48vh;
+    }
+
+    
+}
+
+
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Result__chart__header__price{
+        font-size: 0.8em;
+    }
+
+    #Result__chart {
+        height: 43vh;
+    }
+
+}
+
+
+/*
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .Result__chart__header__price{
+        font-size: 0.8em;
+    }
+
+    #Result__chart {
+        height: 38vh;
+    }
+
+}
+
+
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    .Result__chart__header__price{
+        font-size: 0.8em;
+    }
+    
+    #Result__chart {
+        height: 38vh;
+    }
+
+}
+
+
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media screen and (max-width: 575px) {
+  
+}
+
+
+  

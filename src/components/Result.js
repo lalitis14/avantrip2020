@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import './styles/result.css'
+import { FaAngleLeft, FaAngleRight, FaRegBell } from "react-icons/fa";
 require ('./RoundedBars.js')
 
 
@@ -19,13 +20,12 @@ class Result extends React.Component {
            }
         };
 
-        const chartHeight = 40;
+        const chartHeight = 50;
         // var screenWidth = window.innerWidth;
         // if ( screenWidth < 800) {
         //     chartHeight = 80;
         // }    
          
-
         this.state = {
             chartData:{
                 height: chartHeight,
@@ -42,6 +42,7 @@ class Result extends React.Component {
 
     render(){
     return(
+      <div id="Result">
         <div id="Result__chart">
           <Bar
             data={this.state.chartData}
@@ -53,12 +54,23 @@ class Result extends React.Component {
                         ticks: {
                           minRotation: 90,
                           fontSize: 10,
-                        }
+                        },
+                        scaleLabel: {
+                          display: true,
+                          padding: 10,
+                        },
+                        gridLines: {
+                          display:false,
+                        },
                       }],
                     yAxes: [
                       {
-                        display: false,
+                        display: true,
+                        gridLines: {
+                          color: '#e7e7e7',
+                        },
                         ticks: {
+                          display: false,
                           min: 13000,
                           max: 22000
                         }
@@ -71,9 +83,6 @@ class Result extends React.Component {
                 },
                 title:{
                     display:true,
-                    text: ['Junio', 'desde AR$ 14.500'],
-                    fontSize: 12,
-                    fontColor: 'rgb(7,155,217)',
                     padding: 5,
                 },
             }}
@@ -81,6 +90,23 @@ class Result extends React.Component {
             height={this.state.chartData.height}
           />
         </div>
+        
+        <div id="Result__chart__footer">
+          <p>Tarifa por adulto para una estadía de 14 días<br/>
+          Los precios visualizados son los mayores encontrados por los usuarios en los últimos días y podrían no estar actualizados</p>
+        </div>
+
+        <div id="Result__chart__header">
+          <span className="text-secondary" ><FaAngleLeft /></span>
+          <span className="Result__chart__header__month"><b>Abril</b><p className="Result__chart__header__price">desde AR$15.100</p></span>
+          <span className="Result__chart__header__month"><b>Mayo</b><p className="Result__chart__header__price">desde AR$16.100</p></span>
+          <span className="Result__chart__header__month" id="active__month"><b>Junio</b><p id="active__price" className="Result__chart__header__price">desde AR$14.500</p></span>
+          <span className="Result__chart__header__month"><b>Julio</b><p className="Result__chart__header__price">desde AR$17.800</p></span>
+          <span className="Result__chart__header__month"><b>Agosto</b><p className="Result__chart__header__price">desde AR$22.500</p></span>
+          <span className="text-secondary"><FaAngleRight /></span>
+        </div>
+
+    </div>
     )
   }
 }
