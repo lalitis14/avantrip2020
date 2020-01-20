@@ -1,3 +1,6 @@
+.form-control{
+    border-radius: 0;
+}
 .react-daterange-picker__range-divider{
     position: absolute;
     left: 85px;

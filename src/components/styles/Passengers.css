@@ -5,8 +5,8 @@
     top: 40%;    
     left: 5%;
     padding: 50px;
+    z-index: 100;
 }
-
 
 .Modal__title{
     font-size: 16px;
@@ -22,7 +22,6 @@
 
 #passengersInput{
     height: 70px;
-    
 }
 
 #selectInput{

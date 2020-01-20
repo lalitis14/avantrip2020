@@ -37,6 +37,7 @@ class Header extends React.Component {
                         <div className="input-group-append">
                             <span className="input-group-text" id="searchButton"><FaSearch /></span>
                         </div>
+                            <span id="searchButtonXL">BUSCAR VUELOS</span>
                 </div>
             </div>
         </div>
