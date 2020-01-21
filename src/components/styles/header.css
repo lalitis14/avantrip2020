@@ -61,26 +61,27 @@
 
 .floating-label-destination {
   left: 20px;
-  top: 80px;
+  top: 90px;
 }
 
 .floating-label-dates {
   left: 20px;
-  top: 150px;
+  top: 165px;
 }
 
 .floating-label-passengers {
   left: 20px;
-  top: 220px;
+  top: 245px;
 }
 
 #searchButton{
+   height: 70px;
+   padding: 1.3em;
    background-color: rgb(232,0,16);
-   border:none;
    border-bottom-right-radius: 5px;
    border-top-right-radius: 5px;
+   border:none;
    color: rgb(255,255,255);
-   padding: 1.3em;
    display:none;
 }
 

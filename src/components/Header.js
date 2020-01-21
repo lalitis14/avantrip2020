@@ -39,17 +39,17 @@ class Header extends React.Component {
             </div>
             <div className="container">
                 <div className="Header__search input-group">
-                        <div id="origin"><Origin /></div>
+                        <div className="my-1" id="origin"><Origin /></div>
                         <span className="placeholder floating-label-origin">origen</span>
-                        <div id="destination"><Destination/></div>
+                        <div className="my-1" id="destination"><Destination/></div>
                         <span className="placeholder floating-label-destination">destino</span>
-                        <div id="datepicker"><DatePicker/></div>
+                        <div className="my-1" id="datepicker"><DatePicker/></div>
                         <span className="placeholder floating-label-dates">fechas</span>
-                        <div id="passengers"><Passengers /></div>
+                        <div className="my-1" id="passengers"><Passengers /></div>
                         <span className="placeholder floating-label-passengers">pasajeros y clase</span>
-                        <div className="input-group-append">
-                            <Link to="SearchResult"className="input-group-text" id="searchButton">
-                                    <FaSearch className="text-white"/>
+                        <div className="my-1" className="input-group-append">
+                            <Link to="SearchResult"className="input-group-text my-1" id="searchButton">
+                                    <FaSearch className="text-white" />
                             </Link>
                         </div>
                             <Link to="SearchResult"  id="searchButtonXL">

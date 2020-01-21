@@ -102,6 +102,7 @@ const Airports = [
       display: 'block',
       position: 'absolute',
       top: 70,
+      width: 187,
       border: '1px solid #aaa',
       backgroundColor: '#fff',
       fontSize: 16,
