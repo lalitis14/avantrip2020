@@ -101,8 +101,8 @@ const Airports = [
     suggestionsContainerOpen: {
       display: 'block',
       position: 'absolute',
-      top: 70,
-      width: 187,
+      top: 75,
+      width: 250,
       border: '1px solid #aaa',
       backgroundColor: '#fff',
       fontSize: 16,

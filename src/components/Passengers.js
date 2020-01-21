@@ -8,28 +8,37 @@ class Passengers extends React.Component {
         super(props);
         this.state = {
                 ticketClass: 'Económica',
-                nPassengers: '2',
+                nPassengers: 2,
         };
       }
     
       classChange(newValue){
           this.setState({
-            ticketClass: newValue});
+            ticketClass: newValue,
+            });
       };
 
+      nPassengersChange(newValue){
+        this.setState({
+          nPassengers: this.state.nPassengers + newValue,
+          });
+    };
+
       showModal = () => {
-          this.setState({
+        this.setState({
             ...this.state,
             show: !this.state.show
-          })
+        })
       }
    
     render(){
     return(
-        <div onClick={this.showModal} className="form-control" aria-label="passengersAndClass" id="passengersInput">
-            <span id="selectInput"> 
-                {this.state.nPassengers + ' pasajeros, ' + this.state.ticketClass}
-            </span>
+        <div>
+            <div onClick={this.showModal} className="form-control" aria-label="passengersAndClass" id="passengersInput">
+                <span id="selectInput"> 
+                    {this.state.nPassengers + ' pasajeros, ' + this.state.ticketClass}
+                </span>
+            </div>
 
             <ReactModal
                 className={'Passengers__Modal'} 
@@ -54,9 +63,19 @@ class Passengers extends React.Component {
 
                 <div className="row py-2">
                     <h5 className="Modal__title col-12 col-md-6">Pasajeros</h5>
-                    <span className="col-1 offset-md-1 text-right icons"><FaMinus /></span>
-                    <p className="col-2 text-center">2</p>
-                    <span className="col-1 text-left icons"><FaPlus /></span>
+                    <span className="col-1 offset-md-1 text-right icons"
+                        onClick={this.nPassengersChange.bind(this, -1)}
+                            ><FaMinus /></span>
+                    <p className="col-2 text-center">{this.state.nPassengers}</p>
+                    <span className="col-1 text-left icons"
+                        onClick={this.nPassengersChange.bind(this, 1)}
+                    ><FaPlus /></span>
+                </div>
+
+                <div className="row">
+                    <div className="col-2 offset-9 btn btn-primary" onClick={this.showModal}>
+                        Ok
+                    </div>
                 </div>
             </ReactModal>
         </div>

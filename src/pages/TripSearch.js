@@ -1,12 +1,12 @@
 import React from 'react';
-import HeaderIV from './idayvuelta.js';
-import HeaderAndResultIV from './SearchResult.js';
-import './TripSearch.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import HeaderIV from './idayvuelta.js';
+import HeaderAndResultIV from './SearchResult.js';
 
-class Search extends React.Component {
-    render() {
+import './TripSearch.css';
+
+function App() {
       return(
         <BrowserRouter>
           <Switch>
@@ -16,7 +16,7 @@ class Search extends React.Component {
       </BrowserRouter>
         );
     }
-  }
   
-  export default Search;
+  
+  export default App;
   
