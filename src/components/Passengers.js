@@ -7,21 +7,40 @@ class Passengers extends React.Component {
      constructor(props) {
         super(props);
         this.state = {
-                ticketClass: 'Económica',
-                nPassengers: 2,
+            data:{
+                    ticketClass: 'Económica',
+                    nPassengers: 2,
+                },
         };
+
       }
     
-      classChange(newValue){
+      ticketClassChange(newValue){
           this.setState({
-            ticketClass: newValue,
+            data:{
+                ... this.state.data,
+                ticketClass: newValue,
+            }
             });
       };
 
       nPassengersChange(newValue){
+        if (newValue === -1 && this.state.data.nPassengers === 1){
+            this.setState({
+            data:{
+                ... this.state.data,
+                    nPassengers: 1,
+                }
+            });
+        } else { 
         this.setState({
-          nPassengers: this.state.nPassengers + newValue,
+          data:{
+             ... this.state.data,
+              nPassengers: this.state.data.nPassengers + newValue,
+           
+            }
           });
+        }
     };
 
       showModal = () => {
@@ -36,7 +55,7 @@ class Passengers extends React.Component {
         <div>
             <div onClick={this.showModal} className="form-control" aria-label="passengersAndClass" id="passengersInput">
                 <span id="selectInput"> 
-                    {this.state.nPassengers + ' pasajeros, ' + this.state.ticketClass}
+                    {this.state.data.nPassengers + ' pasajeros, ' + this.state.data.ticketClass}
                 </span>
             </div>
 
@@ -46,34 +65,42 @@ class Passengers extends React.Component {
                 isOpen={this.state.show}
                 >
                 <div className="row py-2">
-                    <h5 className="Modal__title col-12 col-md-6">Clase</h5>
-                    <div className="Class__selector col-12 col-md-6">
-                        <span 
-                            onClick={this.classChange.bind(this, 'Económica')}
-                            className="Class__option col-md-2"
-                            >Económica</span>
-                        <span className="Class__option col-md-2"
-                            onClick={this.classChange.bind(this, 'Business')}
-                            >Business</span>
-                        <span className="Class__option  col-md-2"
-                            onClick={this.classChange.bind(this, 'Premium')}
-                            >Premium</span>
+                    <h5 className="Modal__title col-12 col-md-4">Clase</h5>
+                    <div className="Class__selector col-12 col-md-8">
+                            <label className="Class__option" onClick={this.ticketClassChange.bind(this, 'Económica')}>
+                                Económica
+                                <span className="col-md-2">
+                                    <input name="ticketClass" type="hidden" value="Económica"></input>
+                                </span>
+                            </label>
+                            <label className="Class__option" onClick={this.ticketClassChange.bind(this, 'Premium')}>
+                                Premium
+                                <span className="col-md-2">
+                                    <input name="ticketClass" type="hidden" value="Premium"></input>
+                                </span>
+                            </label>
+                            <label className="Class__option" onClick={this.ticketClassChange.bind(this, 'Business')}>
+                                Business
+                                <span className=" col-md-2">
+                                    <input name="ticketClass" type="hidden" value="Business"></input>
+                                </span>
+                            </label>
                     </div>
                 </div>
 
                 <div className="row py-2">
-                    <h5 className="Modal__title col-12 col-md-6">Pasajeros</h5>
-                    <span className="col-1 offset-md-1 text-right icons"
+                    <h5 className="Modal__title col-12 col-md-4">Pasajeros</h5>
+                    <span className="col-1 offset-md-2 text-right icons"
                         onClick={this.nPassengersChange.bind(this, -1)}
                             ><FaMinus /></span>
-                    <p className="col-2 text-center">{this.state.nPassengers}</p>
+                    <p className="col-2 text-center">{this.state.data.nPassengers}</p>
                     <span className="col-1 text-left icons"
                         onClick={this.nPassengersChange.bind(this, 1)}
                     ><FaPlus /></span>
                 </div>
 
                 <div className="row">
-                    <div className="col-2 offset-9 btn btn-primary" onClick={this.showModal}>
+                    <div className="col-2 offset-8 btn btn-primary" onClick={this.showModal}>
                         Ok
                     </div>
                 </div>

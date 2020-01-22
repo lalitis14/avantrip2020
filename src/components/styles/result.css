@@ -9,30 +9,31 @@
     color: rgb(182, 182, 182);
 }
 
-
 #Result {
     position:relative;
+    background-color: rgb(245,246,250);
+    min-height: 12em;
 }
 
 #Result__chart {
+    position: relative;
     background-color: rgb(255,255,255);
     width: 80%;
-    height: 30vh;
+    height: 11em;
     margin: 30px auto;
     box-shadow: 3px 4px 4px 0px rgba(76,76,76,0.5);
     padding-top: 30px;
-    padding-bottom: 20px;
 }
 
 #Result__chart__header{
     border-bottom: 1px solid rgb(230, 230, 230);
-    width: 80%;
+    width: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: absolute;
     top: 2%;
-    left: 10%;
-    height: 5vh;
+    left: 0%;
+    height: 2em;
 }
 
 #active__month{
@@ -49,34 +50,44 @@
 }
 
 #Result__chart__footer{
-    font-size: 0.6em;
+    font-size: 0.50em;
     color: rgb(141, 141, 141);
     position: absolute;
-    bottom:0;
-    left:11%;
-    width:75%
+    top:80%;
+    left:2%;
+    width:95%;
+    padding-bottom: 2%;
 }
 
     /*
   ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+  ##Screen = 1200px to higher resolution desktops
 */
 @media (min-width: 1200px) {
     .Result__chart__header__price{
         font-size: 0.8em;
     }
  
-    #Result__chart {
-        height: 48vh;
+    #Result {
+        height: 25em;
     }
 
-    
+    #Result__chart {
+        height: 20em;
+    }
+
+    #Result__chart__footer{
+        font-size: 0.75em;
+        top: 85%;
+        padding:0%;
+    }
+
 }
 
 
 /*
 ##Device = Laptops, Desktops
-##Screen = B/w 1025px to 1280px
+##Screen = B/w 992px to 1199px
 */
 @media (min-width: 992px) and (max-width: 1199px) {
     .Result__chart__header__price{
@@ -84,15 +95,20 @@
     }
 
     #Result__chart {
-        height: 43vh;
+        height: 18em;
     }
 
+    #Result__chart__footer{
+        font-size: 0.70em;
+    }
+
+    
 }
 
 
 /*
 ##Device = Tablets, Ipads (portrait)
-##Screen = B/w 768px to 1024px
+##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) {
     .Result__chart__header__price{
@@ -100,7 +116,7 @@
     }
 
     #Result__chart {
-        height: 38vh;
+        height: 41vh;
     }
 
 }
@@ -109,7 +125,7 @@
 
 /*
 ##Device = Tablets, Ipads (landscape)
-##Screen = B/w 768px to 1024px
+##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .Result__chart__header__price{
@@ -117,19 +133,9 @@
     }
     
     #Result__chart {
-        height: 38vh;
+        height: 41vh;
     }
 
-}
-
-
-
-/*
-##Device = Most of the Smartphones Mobiles (Portrait)
-##Screen = B/w 320px to 479px
-*/
-@media screen and (max-width: 575px) {
-  
 }
 
 

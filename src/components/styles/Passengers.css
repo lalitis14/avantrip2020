@@ -36,19 +36,19 @@
 
   /*
   ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+  ##Screen = 1200px to higher resolution desktops
 */
 @media (min-width: 1200px) {
     .Passengers__Modal{
-        width: 50%;
-        left: 45%;
+        width: 47%;
+        left: 50%;
     }
 }
 
 
 /*
   ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
+  ##Screen = B/w 992px to 1199px
 */
 @media (min-width: 992px) and (max-width: 1199px) {
     .Passengers__Modal{
@@ -60,7 +60,7 @@
 
 /*
   ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
+  ##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) {
     .Passengers__Modal{
@@ -69,23 +69,10 @@
     }
 }
 
-
-
 /*
   ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
+  ##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     
 }
-
-
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-@media screen and (max-width: 575px) {
-    
-}
-

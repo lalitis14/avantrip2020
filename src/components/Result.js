@@ -4,8 +4,6 @@ import './styles/result.css'
 import { FaAngleLeft, FaAngleRight, FaRegBell } from "react-icons/fa";
 require ('./RoundedBars.js')
 
-
-
 class Result extends React.Component {
     constructor(props){
         super(props);
@@ -19,16 +17,10 @@ class Result extends React.Component {
                barColors[i]="rgb(37,162,220)";
            }
         };
-
-        const chartHeight = 50;
-        // var screenWidth = window.innerWidth;
-        // if ( screenWidth < 800) {
-        //     chartHeight = 80;
-        // }    
-         
         this.state = {
             chartData:{
-                height: chartHeight,
+                width: 200,
+                height: 50,
                 labels: ['Lun 01', 'Mar 02', 'Mie 03', 'Jue 04', 'Vie 05', 'Sab 06', 'Dom 07', 'Lun 08', 'Lun 09', 'Mar 10', 'Mie 11', 'Jue 12', 'Vie 13', 'Sab 14', 'Dom 15', 'Lun 16', 'Lun 17', 'Mar 18', 'Mie 19', 'Jue 20', 'Vie 21', 'Sab 22', 'Dom 23', 'Lun 24', 'Lun 25', 'Mar 26', 'Mie 27', 'Jue 28', 'Vie 29', 'Sab 30', 'Dom 31'],
                 datasets: [
                     {
@@ -86,10 +78,9 @@ class Result extends React.Component {
                     padding: 5,
                 },
             }}
-            width={200}
+            width={this.state.chartData.width}
             height={this.state.chartData.height}
           />
-        </div>
         
         <div id="Result__chart__footer">
           <p>Tarifa por adulto para una estadía de 14 días<br/>
@@ -105,6 +96,7 @@ class Result extends React.Component {
           <span className="Result__chart__header__month"><b>Agosto</b><p className="Result__chart__header__price">desde AR$22.500</p></span>
           <span className="text-secondary"><FaAngleRight /></span>
         </div>
+      </div>
 
     </div>
     )

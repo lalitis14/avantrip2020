@@ -1,16 +1,19 @@
 import React from 'react';
 import Header from '../components/Header';
-import './TripSearch.css';
+import Result from '../components/Result';
+import './idayvuelta.css';
 
-class HeaderIV extends React.Component {
+class IdaYVuelta extends React.Component {
     render() {
       return(
         <div className="TripSearch__body">
-          <Header />
+          <Header opened={false}>
+            <Result />
+          </Header>
         </div>
       );
     }
   }
   
-  export default HeaderIV;
+  export default IdaYVuelta;
   

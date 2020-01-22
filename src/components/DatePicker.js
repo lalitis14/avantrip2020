@@ -1,21 +1,23 @@
 import React from 'react';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import './styles/DatePicker.css'
+import { getDefaultNormalizer } from '@testing-library/react';
 
 
 class DatePicker extends React.Component {
     state = {
         date: [new Date(), new Date()],
-        }
-
-    onChange = date => this.setState({ date })
-
+    }
+    
+    onChange = date =>{
+        this.setState({ date })
+    }   
+    
     render(){
     return(
         <div className="form-control" aria-label="dates" id="dateRange">
             <DateRangePicker
                 className={'datePicker__input'}	
-                // format={'EEE-dd-MMM'}
                 calendarIcon={null}
                 clearIcon={null}
                 required={true}

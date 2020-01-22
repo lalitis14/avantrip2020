@@ -1,22 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import HeaderIV from './idayvuelta.js';
-import HeaderAndResultIV from './SearchResult.js';
-
-import './TripSearch.css';
+import IdaYVuelta from './idayvuelta.js';
 
 function App() {
       return(
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={HeaderIV} />
-            <Route exact path="/SearchResult" component={HeaderAndResultIV} />
+            <Route exact path="/" component={IdaYVuelta} />
           </Switch>
       </BrowserRouter>
         );
     }
-  
   
   export default App;
   

@@ -6,7 +6,7 @@
         ),
         url('../../images/new_york_header.png');
     background-repeat: repeat;
-    padding-bottom: 4rem;
+    min-height: 600px;
   }
 
 .Header__subtitle {
@@ -51,28 +51,28 @@
   text-transform: uppercase;
   color: rgb(136,140,145);
   font-size: 0.7em;
-  position: absolute;
   z-index: 1;
+  position: absolute;
 }
 
 .floating-label-origin {
-  left: 3%;
-  top: 4%;
+  left: 12px;
+  top: 10px;
 }
 
 .floating-label-destination {
-  left: 3%;
-  top: 24%;
+  left: 12px;
+  top: 88px;
 }
 
 .floating-label-dates {
-  left: 3%;
-  top: 45%;
+  left: 12px;
+  top: 166px;
 }
 
 .floating-label-passengers {
-  left: 3%;
-  top: 66%;
+  left: 12px;
+  top: 248px;
 }
 
 #searchButton{
@@ -99,10 +99,14 @@
 
   /*
   ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+  ##Screen = 1200px to higher resolution desktops
 */
 @media (min-width: 1200px) {
-    .Header__search {
+  .Header__back{
+    min-height: 320px;
+  }
+
+  .Header__search {
       justify-content: center;
       align-items: stretch;
       flex-direction: row;
@@ -126,19 +130,19 @@
       }
 
     .placeholder{
-      top: 17%;
+      top: 10px;
     }
 
     .floating-label-origin {
-      left: 2%;
+      left: 1%;
     }
     
     .floating-label-destination {
-      left: 25%;
+      left: 24.5%;
     }
     
     .floating-label-dates {
-      left: 48%;
+      left: 47.5%;
     }
     
     .floating-label-passengers {
@@ -174,10 +178,13 @@
 
 /*
   ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
+  ##Screen = B/w 992px to 1199px
 */
 @media (min-width: 992px) and (max-width: 1199px) {
- 
+      .Header__back{
+        min-height: 320px;
+      }
+
      .Header__search {
       justify-content: center;
       align-items: stretch;
@@ -251,7 +258,7 @@
 
 /*
   ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
+  ##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -295,7 +302,7 @@
 
 /*
   ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
+  ##Screen = B/w 768px to 991px
 */
 @media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .Header__title {
@@ -317,12 +324,3 @@
     
 }
 
-
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-@media screen and (max-width: 575px) {
-    
-}
